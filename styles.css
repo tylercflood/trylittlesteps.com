@@ -193,7 +193,7 @@ h1 {
 }
 
 .phone-front {
-  right: 6%;
+  right: 0;
   bottom: 0;
   width: min(310px, 62vw);
   transform: rotate(7deg);
@@ -206,7 +206,7 @@ h1 {
 }
 
 .phone-back {
-  left: 4%;
+  left: -2%;
   top: 56px;
   width: 268px;
   height: 548px;
@@ -219,47 +219,106 @@ h1 {
   padding: 84px 24px 24px;
 }
 
-.mini-screen {
+.calendar-screen {
+  display: grid;
+  align-content: start;
+  gap: 18px;
   background: #111111;
   color: #ffffff;
 }
 
-.mini-label {
-  color: #b6b6b6;
-  font-size: 14px;
-  font-weight: 850;
+.calendar-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.mini-number {
-  margin-top: 6px;
-  font-size: 58px;
+.calendar-header p {
+  font-size: 24px;
   line-height: 1;
   font-weight: 950;
 }
 
-.mini-meter {
-  height: 18px;
-  margin-top: 28px;
-  overflow: hidden;
+.calendar-header span {
+  padding: 6px 9px;
   border-radius: 999px;
-  background: #333333;
-}
-
-.mini-meter span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
   background: #ffffff;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 950;
+  white-space: nowrap;
 }
 
-.mini-unlock {
-  margin-top: 28px;
-  padding: 16px;
-  border-radius: 18px;
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.day-name {
+  color: #a7a7a7;
+  font-size: 10px;
+  font-weight: 950;
+  text-align: center;
+}
+
+.day {
+  position: relative;
+  display: grid;
+  min-height: 38px;
+  padding: 6px 4px;
+  border: 1px solid #2b2b2b;
+  border-radius: 9px;
+  background: #1b1b1b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.day small {
+  align-self: end;
+  color: #9d9d9d;
+  font-size: 9px;
+  font-weight: 850;
+}
+
+.day b {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #f2c14e;
+  color: #111111;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.day.earned {
+  border-color: #f2c14e;
+  background: #fff6dd;
+  color: #111111;
+}
+
+.day.earned small {
+  color: #7a5c11;
+}
+
+.day.muted {
+  opacity: 0.45;
+}
+
+.calendar-note {
+  padding: 12px;
+  border-radius: 14px;
   background: #eef8f4;
   color: #111111;
-  font-size: 18px;
+  font-size: 13px;
+  line-height: 1.25;
   font-weight: 950;
 }
 
@@ -438,8 +497,31 @@ footer {
     padding: 58px 18px 18px;
   }
 
-  .mini-number {
-    font-size: 42px;
+  .calendar-screen {
+    gap: 12px;
+  }
+
+  .calendar-header p {
+    font-size: 19px;
+  }
+
+  .calendar-header span,
+  .calendar-note {
+    font-size: 10px;
+  }
+
+  .calendar-grid {
+    gap: 4px;
+  }
+
+  .day {
+    min-height: 30px;
+    border-radius: 7px;
+    font-size: 10px;
+  }
+
+  .day small {
+    font-size: 8px;
   }
 
   footer {
