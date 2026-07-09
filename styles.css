@@ -259,10 +259,10 @@ h1 {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 5px;
-  padding: 10px;
+  gap: 6px;
+  padding: 12px;
   border: 1px solid #ded7ce;
-  border-radius: 18px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 16px 34px rgba(17, 17, 17, 0.1);
 }
@@ -276,71 +276,28 @@ h1 {
 
 .day {
   position: relative;
-  display: grid;
-  min-height: 35px;
-  padding: 6px 4px;
-  border: 1px solid #eee8df;
-  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-height: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
   background: #f8f7f4;
   color: #111111;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 950;
 }
 
-.day small {
-  align-self: end;
-  color: #8a817b;
-  font-size: 9px;
-  font-weight: 800;
-}
-
-.day b {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  display: grid;
-  place-items: center;
-  width: 13px;
-  height: 13px;
-  border-radius: 999px;
-  background: #f2c14e;
-  color: #111111;
-  font-size: 8px;
-  line-height: 1;
-}
-
 .day.earned {
-  border-color: #e5b73e;
-  background: #fff7de;
+  border-color: #d7a044;
+  border-width: 2px;
+  background: #fffaf0;
   color: #111111;
-}
-
-.day.earned small {
-  color: #7a5c11;
 }
 
 .day.muted {
   opacity: 0.45;
-}
-
-.calendar-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  justify-self: start;
-  padding: 8px 10px;
-  border: 1px solid #ded7ce;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #5f5f5d;
-  font-size: 11px;
-  line-height: 1.25;
-  font-weight: 850;
-}
-
-.calendar-note span {
-  color: #d7a044;
-  font-size: 12px;
 }
 
 .steps,
@@ -526,8 +483,7 @@ footer {
     font-size: 19px;
   }
 
-  .calendar-header span,
-  .calendar-note {
+  .calendar-header span {
     font-size: 10px;
   }
 
@@ -537,12 +493,7 @@ footer {
 
   .day {
     min-height: 30px;
-    border-radius: 7px;
     font-size: 10px;
-  }
-
-  .day small {
-    font-size: 8px;
   }
 
   footer {
