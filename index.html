@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://trylittlesteps.com/assets/family-walk-moments.jpg" />
     <link rel="icon" href="assets/logo-mark.png" />
-    <link rel="stylesheet" href="styles.css?v=20260726-header-padding" />
+    <link rel="stylesheet" href="styles.css?v=20260726-app-store-modal" />
   </head>
   <body>
     <main id="top">
@@ -61,12 +61,13 @@
         <div class="hero-cta">
           <p class="launch-note">Bringing generations together, one Little Step at a time.</p>
           <div class="actions">
-            <a
+            <button
               class="primary-button"
-              href="mailto:hello@trylittlesteps.com?subject=Join%20the%20Little%20Steps%20waitlist&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Little%20Steps%20waitlist.%0A%0AName%3A%0AEmail%3A%0AI%27m%20interested%20for%3A"
+              id="app-store-button"
+              type="button"
             >
               Download on the App Store
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -139,6 +140,17 @@
       </section>
     </main>
 
+    <dialog class="app-store-dialog" id="app-store-dialog" aria-labelledby="app-store-dialog-title">
+      <div class="app-store-dialog-card">
+        <p class="app-store-dialog-kicker">Coming soon</p>
+        <h2 id="app-store-dialog-title">Little Steps isn’t available on the App Store yet.</h2>
+        <p>We’re putting on the finishing touches. Check back soon for the official download.</p>
+        <form method="dialog">
+          <button class="primary-button" type="submit">Got it</button>
+        </form>
+      </div>
+    </dialog>
+
     <footer>
       <span>© 2026 Little Steps LLC</span>
       <span class="footer-links">
@@ -147,5 +159,15 @@
         <a href="mailto:trylittlesteps@gmail.com">Support</a>
       </span>
     </footer>
+
+    <script>
+      const appStoreButton = document.querySelector("#app-store-button");
+      const appStoreDialog = document.querySelector("#app-store-dialog");
+
+      appStoreButton.addEventListener("click", () => appStoreDialog.showModal());
+      appStoreDialog.addEventListener("click", (event) => {
+        if (event.target === appStoreDialog) appStoreDialog.close();
+      });
+    </script>
   </body>
 </html>
