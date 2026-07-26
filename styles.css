@@ -597,12 +597,15 @@ h2 {
 
 .step-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
 .step-grid article {
-  min-height: 220px;
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -622,12 +625,11 @@ h2 {
 }
 
 h3 {
-  margin-top: 28px;
+  margin-top: 24px;
   font-size: 24px;
   font-weight: 950;
 }
 
-.step-grid p,
 .waitlist p {
   margin-top: 10px;
   color: var(--muted);
@@ -702,7 +704,7 @@ footer {
   }
 
   .step-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .steps,
@@ -728,6 +730,24 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-grid article {
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .step-grid h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
   .proof-pill {
     align-items: flex-start;
     border-radius: 18px;
