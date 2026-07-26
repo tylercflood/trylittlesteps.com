@@ -14,9 +14,9 @@
       content="Motivate more walks with private family moments."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://trylittlesteps.com/assets/app-preview-welcome.png" />
+    <meta property="og:image" content="https://trylittlesteps.com/assets/family-walk-moments.jpg" />
     <link rel="icon" href="assets/logo-mark.png" />
-    <link rel="stylesheet" href="styles.css?v=20260709-calendar5" />
+    <link rel="stylesheet" href="styles.css?v=20260722-dynamic-hero" />
   </head>
   <body>
     <header class="site-header">
@@ -26,6 +26,7 @@
       </a>
       <nav aria-label="Main navigation">
         <a href="#how">How it works</a>
+        <a href="#health-faq">Apple Health FAQ</a>
         <a href="#waitlist">Waitlist</a>
       </nav>
     </header>
@@ -39,7 +40,7 @@
               <span></span>
               <span></span>
             </span>
-            Private family memories, earned by walking
+            <span class="proof-copy">Private family memories, earned by walking</span>
           </div>
           <h1>Give your loved ones a reason to walk</h1>
           <p>
@@ -57,49 +58,44 @@
           <p class="launch-note">iPhone app coming soon. No App Store download yet.</p>
         </div>
 
-        <div class="hero-visual" aria-label="Little Steps app preview">
-          <div class="phone phone-back">
-            <div class="phone-screen calendar-screen">
-              <div class="calendar-header">
-                <p>July steps</p>
-                <span>8 moments</span>
+        <div class="hero-visual" aria-label="Little Steps story: childhood moments become motivation to walk">
+          <div class="phone story-phone">
+            <div class="phone-camera" aria-hidden="true"></div>
+            <div class="story-screen">
+              <img
+                class="growth-film"
+                src="assets/child-growth-sequence.jpg"
+                alt="A child growing from newborn to runner"
+              />
+              <div class="story-caption">
+                <span>FAMILY MOMENTS</span>
+                <strong>They grow in little steps.</strong>
               </div>
-              <div class="calendar-grid" aria-hidden="true">
-                <span class="day-name">S</span>
-                <span class="day-name">M</span>
-                <span class="day-name">T</span>
-                <span class="day-name">W</span>
-                <span class="day-name">T</span>
-                <span class="day-name">F</span>
-                <span class="day-name">S</span>
-                <span class="day muted">29</span>
-                <span class="day muted">30</span>
-                <span class="day earned">1</span>
-                <span class="day">2</span>
-                <span class="day earned">3</span>
-                <span class="day">4</span>
-                <span class="day">5</span>
-                <span class="day earned">6</span>
-                <span class="day">7</span>
-                <span class="day">8</span>
-                <span class="day earned">9</span>
-                <span class="day">10</span>
-                <span class="day earned">11</span>
-                <span class="day">12</span>
-                <span class="day">13</span>
-                <span class="day earned">14</span>
-                <span class="day">15</span>
-                <span class="day">16</span>
-                <span class="day earned">17</span>
-                <span class="day">18</span>
-                <span class="day">19</span>
-                <span class="day earned">20</span>
-                <span class="day">21</span>
-              </div>
+              <div class="story-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="phone phone-front">
-            <img src="assets/app-preview-welcome.png?v=20260709" alt="Little Steps welcome screen preview" />
+
+          <img class="hero-mascots" src="assets/loading-mascots.png" alt="Little Steps foot mascots walking together" />
+
+          <div class="phone walk-phone">
+            <div class="phone-camera" aria-hidden="true"></div>
+            <div class="walk-screen">
+              <img src="assets/family-walk-moments.jpg" alt="An older couple walking and earning family photos" />
+              <div class="walk-topline">
+                <span>Today</span>
+                <strong>3,842 steps</strong>
+              </div>
+              <div class="walk-reward">
+                <span class="reward-icon" aria-hidden="true">♥</span>
+                <div>
+                  <strong>158 steps to your moment</strong>
+                  <span>Keep going—you’re almost there.</span>
+                </div>
+              </div>
+              <div class="walk-meter" aria-label="3,842 of 4,000 steps">
+                <span></span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -128,6 +124,61 @@
         </div>
       </section>
 
+      <section class="faq" id="health-faq">
+        <div class="faq-heading">
+          <p class="section-kicker">Apple Health FAQ</p>
+          <h2>Bring your steps with you.</h2>
+          <p>Little Steps reads step totals from Apple Health, so an iPhone, Apple Watch, Garmin, or another compatible tracker can help unlock moments.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>How do I connect Little Steps to Apple Health?</summary>
+            <div>
+              <p>On your loved one’s iPhone, open Little Steps and tap <strong>Connect Apple Health</strong>. When Apple asks, allow Little Steps to read <strong>Steps</strong>. Walk data stays under the loved one’s control and Little Steps does not write data to Apple Health.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does Little Steps work with Apple Watch?</summary>
+            <div>
+              <p>Yes. Pair the Apple Watch with the same iPhone used for Little Steps. Apple Watch activity flows into Apple Health automatically. Then connect Little Steps and allow Steps access.</p>
+              <p>If steps are missing, open <strong>Health → profile picture → Devices → Apple Watch → Privacy Settings</strong> and make sure Fitness Tracking is on.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I use a Garmin watch?</summary>
+            <div>
+              <ol>
+                <li>Pair the watch with the Garmin Connect app and complete a device sync.</li>
+                <li>In Garmin Connect, go to <strong>More → Settings → Connected Apps → Apple Health</strong>, connect it, and allow Steps.</li>
+                <li>Keep Garmin Connect open while syncing. Then check <strong>Health → Steps</strong> before refreshing Little Steps.</li>
+              </ol>
+              <p>Garmin says Connect sends step data to Apple Health after a successful device sync when sharing is enabled.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What about other watches and fitness trackers?</summary>
+            <div>
+              <p>Install the device maker’s iPhone app, pair and sync the tracker, then enable that app’s Apple Health sharing for Steps. In Apple Health, tap your profile picture, choose <strong>Apps</strong>, select the device app, and turn on Steps. Not every device or companion app supports Apple Health.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Why is my step count missing or different?</summary>
+            <div>
+              <p>First confirm today’s steps appear in the Apple Health app. Then open <strong>Health → Steps → Data Sources &amp; Access</strong> to confirm your watch or companion app is listed and placed in the order you prefer. Reopen the device app to sync, then return to Little Steps and refresh.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is my Health data private?</summary>
+            <div>
+              <p>Little Steps requests read-only access to step counts for progress and moment unlocking. It does not write to Apple Health or use Health data for advertising. You can change access at any time in the Health app.</p>
+            </div>
+          </details>
+        </div>
+        <p class="faq-sources">
+          Need more help? See Apple’s <a href="https://support.apple.com/en-us/108779">Health data guide</a> or Garmin’s <a href="https://support.garmin.com/en-US/?faq=lK5FPB9iPF5PXFkIpFlFPA">Apple Health sharing guide</a>.
+        </p>
+      </section>
+
       <section class="waitlist" id="waitlist">
         <p class="section-kicker">Coming soon</p>
         <h2>Be first to try Little Steps.</h2>
@@ -142,8 +193,12 @@
     </main>
 
     <footer>
-      <span>Little Steps</span>
-      <a href="mailto:hello@trylittlesteps.com">hello@trylittlesteps.com</a>
+      <span>© 2026 Little Steps LLC</span>
+      <span class="footer-links">
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
+        <a href="mailto:trylittlesteps@gmail.com">Support</a>
+      </span>
     </footer>
   </body>
 </html>
