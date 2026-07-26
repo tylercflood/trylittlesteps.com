@@ -211,12 +211,18 @@ h1 {
   transform: translateX(-50%);
 }
 
-.story-phone {
+.growth-card {
+  position: absolute;
   left: -4%;
-  top: 70px;
+  top: 164px;
   z-index: 1;
-  width: 258px;
-  height: 536px;
+  width: 286px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 9px solid #171717;
+  border-radius: 38px;
+  background: #f2f1ee;
+  box-shadow: 0 32px 72px rgba(17, 17, 17, 0.22);
   transform: rotate(-7deg);
   animation: phone-drift-left 7s ease-in-out infinite;
 }
@@ -231,7 +237,6 @@ h1 {
   animation: phone-drift-right 8s ease-in-out infinite;
 }
 
-.story-screen,
 .walk-screen {
   position: relative;
   width: 100%;
@@ -241,19 +246,18 @@ h1 {
   background: #111111;
 }
 
-.growth-film {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 175%;
-  max-width: none;
-  height: auto;
+.growth-frame {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  background-image: url("assets/child-growth-sequence.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 333.333% auto;
   filter: grayscale(1) contrast(1.03);
-  transform: translate3d(-50%, 0, 0);
-  animation: grow-through-time 16s ease-in-out infinite alternate;
+  animation: growth-flipbook 1.25s linear infinite;
 }
 
-.story-screen::after,
 .walk-screen::after {
   content: "";
   position: absolute;
@@ -261,53 +265,6 @@ h1 {
   pointer-events: none;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), transparent 34%, rgba(0, 0, 0, 0.58));
 }
-
-.story-caption {
-  position: absolute;
-  right: 18px;
-  bottom: 34px;
-  left: 18px;
-  z-index: 3;
-  display: grid;
-  gap: 6px;
-  color: #ffffff;
-}
-
-.story-caption span {
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.13em;
-}
-
-.story-caption strong {
-  max-width: 190px;
-  font-size: 23px;
-  line-height: 1.02;
-  font-weight: 950;
-}
-
-.story-progress {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  z-index: 4;
-  display: grid;
-  gap: 6px;
-  transform: translateY(-50%);
-}
-
-.story-progress i {
-  width: 5px;
-  height: 5px;
-  border-radius: 99px;
-  background: rgba(255, 255, 255, 0.42);
-  animation: story-dot 8s ease-in-out infinite;
-}
-
-.story-progress i:nth-child(2) { animation-delay: 1.6s; }
-.story-progress i:nth-child(3) { animation-delay: 3.2s; }
-.story-progress i:nth-child(4) { animation-delay: 4.8s; }
-.story-progress i:nth-child(5) { animation-delay: 6.4s; }
 
 .walk-screen > img {
   display: block;
@@ -427,9 +384,12 @@ h1 {
   animation: mascot-step 3.2s ease-in-out infinite;
 }
 
-@keyframes grow-through-time {
-  0%, 12% { transform: translate3d(-50%, 0, 0) scale(1.02); }
-  88%, 100% { transform: translate3d(-50%, -118px, 0) scale(1.02); }
+@keyframes growth-flipbook {
+  0%, 19.999% { background-position: center 0%; }
+  20%, 39.999% { background-position: center 25%; }
+  40%, 59.999% { background-position: center 50%; }
+  60%, 79.999% { background-position: center 75%; }
+  80%, 100% { background-position: center 100%; }
 }
 
 @keyframes walk-zoom {
@@ -460,11 +420,6 @@ h1 {
 @keyframes reward-breathe {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.025); }
-}
-
-@keyframes story-dot {
-  0%, 18%, 100% { background: rgba(255, 255, 255, 0.42); transform: scale(1); }
-  8% { background: #ffffff; transform: scale(1.7); }
 }
 
 .steps,
@@ -704,7 +659,7 @@ footer {
     margin: 0 auto;
   }
 
-  .story-phone {
+  .growth-card {
     left: 4%;
   }
 
@@ -770,11 +725,10 @@ footer {
     min-height: 468px;
   }
 
-  .story-phone {
+  .growth-card {
     left: 3%;
-    top: 48px;
-    width: 168px;
-    height: 352px;
+    top: 106px;
+    width: 184px;
     border-width: 7px;
     border-radius: 32px;
   }
@@ -787,7 +741,6 @@ footer {
     border-radius: 32px;
   }
 
-  .story-screen,
   .walk-screen {
     border-radius: 24px;
   }
@@ -796,20 +749,6 @@ footer {
     top: 9px;
     width: 52px;
     height: 16px;
-  }
-
-  .story-caption {
-    right: 12px;
-    bottom: 24px;
-    left: 12px;
-  }
-
-  .story-caption strong {
-    font-size: 16px;
-  }
-
-  .story-caption span {
-    font-size: 8px;
   }
 
   .walk-topline {
