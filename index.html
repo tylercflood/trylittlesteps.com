@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://trylittlesteps.com/assets/family-walk-moments.jpg" />
     <link rel="icon" href="assets/logo-mark.png" />
-    <link rel="stylesheet" href="styles.css?v=20260726-compact-desktop" />
+    <link rel="stylesheet" href="styles.css?v=20260726-four-step-story" />
   </head>
   <body>
     <header class="site-header">
@@ -35,45 +35,58 @@
           </p>
         </div>
 
-        <div class="hero-visual" aria-label="Little Steps story: childhood moments become motivation to walk">
-          <div class="phone growth-phone">
-            <div class="phone-camera" aria-hidden="true"></div>
-            <div class="growth-screen">
-              <div class="growth-app-bar">
-                <img src="assets/logo-mark.png" alt="" />
-                <strong>Little Steps</strong>
-              </div>
-              <div
-                class="growth-frame"
-                role="img"
-                aria-label="A baby growing from newborn to runner"
-              ></div>
-              <div class="growth-app-meta">
-                <span>Family moments</span>
-                <strong>5 photos</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="phone walk-phone">
-            <div class="phone-camera" aria-hidden="true"></div>
-            <div class="walk-screen">
-              <img src="assets/family-walk-moments.jpg" alt="An older couple walking and earning family photos" />
-              <div class="walk-topline">
-                <span>Today</span>
-                <strong>3,842 steps</strong>
-              </div>
-              <div class="walk-reward">
-                <span class="reward-icon" aria-hidden="true">♥</span>
-                <div>
-                  <strong>158 steps to your moment</strong>
-                  <span>Keep going—you’re almost there.</span>
+        <div class="hero-visual storyboard" id="how" aria-labelledby="storyboard-title">
+          <h2 class="storyboard-title" id="storyboard-title">How it works</h2>
+          <div class="story-panels">
+            <article class="story-panel upload-panel">
+              <div class="mini-app upload-app" aria-label="Little Steps photo queue screen">
+                <div class="mini-app-bar">
+                  <strong>Our Family</strong>
+                  <span aria-hidden="true">●</span>
                 </div>
+                <small>Photos queued to unlock</small>
+                <div class="photo-grid" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mini-app-button">Add photos</span>
               </div>
-              <div class="walk-meter" aria-label="3,842 of 4,000 steps">
-                <span></span>
+              <div class="story-label"><span>1</span><strong>Add private photos</strong></div>
+            </article>
+
+            <article class="story-panel invite-panel">
+              <div class="invite-card">
+                <img src="assets/logo-mark.png" alt="" />
+                <small>Little Steps</small>
+                <strong>Invite Grandma</strong>
+                <p>Share private family moments</p>
+                <span>Send invite</span>
               </div>
-            </div>
+              <div class="story-label"><span>2</span><strong>Invite loved ones</strong></div>
+            </article>
+
+            <article class="story-panel walking-panel">
+              <div class="mini-app steps-app" aria-label="Little Steps daily walking progress screen">
+                <small>Today</small>
+                <strong>3,842</strong>
+                <span class="steps-unit">steps</span>
+                <div class="progress-ring" aria-label="3,842 of 4,000 steps">
+                  <img src="assets/logo-mark.png" alt="" />
+                </div>
+                <p>158 steps to your next photo</p>
+              </div>
+              <div class="story-label"><span>3</span><strong>Loved ones walk</strong></div>
+            </article>
+
+            <article class="story-panel unlock-panel">
+              <div class="mini-app unlock-app" aria-label="Little Steps unlocked family photo screen">
+                <small>Moment unlocked</small>
+                <div class="unlocked-photo" role="img" aria-label="A new family photo unlocked"></div>
+                <strong>A new family moment</strong>
+                <span class="mini-app-button">View photo</span>
+              </div>
+              <div class="story-label"><span>4</span><strong>Loved ones unlock photos</strong></div>
+            </article>
           </div>
         </div>
 
@@ -87,28 +100,6 @@
               Download on the App Store
             </a>
           </div>
-        </div>
-      </section>
-
-      <section class="steps" id="how">
-        <h2>How it works</h2>
-        <div class="step-grid">
-          <article>
-            <span>1</span>
-            <h3>Add private photos</h3>
-          </article>
-          <article>
-            <span>2</span>
-            <h3>Invite loved ones</h3>
-          </article>
-          <article>
-            <span>3</span>
-            <h3>Loved ones walk</h3>
-          </article>
-          <article>
-            <span>4</span>
-            <h3>Loved ones unlock photos</h3>
-          </article>
         </div>
       </section>
 

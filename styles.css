@@ -61,7 +61,7 @@ a {
   display: grid;
   justify-items: center;
   gap: 10px;
-  width: min(920px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
   padding: 8px 0 18px;
 }
@@ -149,10 +149,339 @@ h1 {
 
 .hero-visual {
   position: relative;
-  width: min(100%, 520px);
-  min-height: clamp(320px, 42vh, 390px);
+  width: 100%;
+  min-height: 0;
   margin: 0 auto;
   isolation: isolate;
+}
+
+.storyboard-title {
+  max-width: none;
+  margin: 0 0 9px;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+}
+
+.story-panels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  height: clamp(300px, 36vh, 360px);
+  padding: 8px;
+  border-radius: 24px;
+  background: #29241f;
+  box-shadow: 0 24px 52px rgba(31, 27, 23, 0.18);
+}
+
+.story-panel {
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+  border-radius: 18px;
+  background: #e8dfd0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.story-panel::after {
+  content: "→";
+  position: absolute;
+  top: 47%;
+  right: -23px;
+  z-index: 8;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  font-size: 23px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(17, 17, 17, 0.15);
+}
+
+.story-panel:last-child::after {
+  content: none;
+}
+
+.upload-panel,
+.walking-panel {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.88), transparent 42%),
+    #dcd4c7;
+}
+
+.invite-panel,
+.unlock-panel {
+  background-image:
+    linear-gradient(180deg, rgba(17, 17, 17, 0.04), rgba(17, 17, 17, 0.18)),
+    url("assets/family-walk-moments.jpg");
+  background-repeat: no-repeat;
+}
+
+.invite-panel {
+  background-position: center center;
+  background-size: 112% auto;
+}
+
+.unlock-panel {
+  background-position: 72% center;
+  background-size: 158% auto;
+}
+
+.mini-app {
+  position: absolute;
+  top: 14px;
+  bottom: 56px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: min(74%, 190px);
+  padding: 27px 10px 10px;
+  overflow: hidden;
+  border: 6px solid #171717;
+  border-radius: 26px;
+  background: #f8f8f7;
+  color: var(--ink);
+  box-shadow: 0 16px 28px rgba(17, 17, 17, 0.24);
+  transform: translateX(-50%);
+}
+
+.mini-app::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 46px;
+  height: 13px;
+  border-radius: 999px;
+  background: #111111;
+  transform: translateX(-50%);
+}
+
+.mini-app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.mini-app-bar span {
+  color: var(--accent);
+  font-size: 8px;
+}
+
+.mini-app > small,
+.upload-app > small {
+  color: #716b65;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.photo-grid span,
+.unlocked-photo {
+  border-radius: 7px;
+  background-image: url("assets/child-growth-sequence.jpg");
+  background-repeat: no-repeat;
+  background-size: 333.333% auto;
+}
+
+.photo-grid span {
+  aspect-ratio: 1;
+}
+
+.photo-grid span:nth-child(1) { background-position: center 0%; }
+.photo-grid span:nth-child(2) { background-position: center 25%; }
+.photo-grid span:nth-child(3) { background-position: center 50%; }
+.photo-grid span:nth-child(4) { background-position: center 75%; }
+.photo-grid span:nth-child(5) { background-position: center 100%; }
+.photo-grid span:nth-child(6) { background-position: center 50%; }
+
+.mini-app-button {
+  display: grid;
+  min-height: 25px;
+  margin-top: auto;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.invite-card {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  left: 16px;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.91);
+  text-align: center;
+  box-shadow: 0 14px 26px rgba(17, 17, 17, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.invite-card img {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+}
+
+.invite-card small {
+  color: #716b65;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.invite-card strong {
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.invite-card p {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.invite-card > span {
+  margin-top: 3px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.steps-app {
+  align-items: center;
+  text-align: center;
+}
+
+.steps-app > small {
+  margin-top: 2px;
+}
+
+.steps-app > strong {
+  margin-top: 2px;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.steps-unit {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.progress-ring {
+  display: grid;
+  width: clamp(74px, 9vh, 90px);
+  height: clamp(74px, 9vh, 90px);
+  margin-top: 8px;
+  place-items: center;
+  border-radius: 999px;
+  background: conic-gradient(var(--accent) 0 346deg, #d8ded5 346deg 360deg);
+  box-shadow: inset 0 0 0 11px #f8f8f7;
+}
+
+.progress-ring img {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+}
+
+.steps-app p {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.unlock-app {
+  right: 9px;
+  left: auto;
+  width: 58%;
+  transform: rotate(3deg);
+}
+
+.unlock-app > small {
+  color: var(--ink);
+  text-align: center;
+  font-weight: 900;
+}
+
+.unlocked-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-top: 8px;
+  background-position: center 75%;
+}
+
+.unlock-app > strong {
+  margin-top: 7px;
+  font-size: 9px;
+  line-height: 1.15;
+  text-align: center;
+  font-weight: 950;
+}
+
+.story-label {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 6px 9px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 250, 236, 0.94);
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(17, 17, 17, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.story-label span {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.story-label strong {
+  font-size: clamp(11px, 1vw, 14px);
+  line-height: 1.1;
+  font-weight: 950;
 }
 
 .phone {
@@ -658,6 +987,19 @@ footer {
     right: 12%;
   }
 
+  .story-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
+  }
+
+  .story-panel {
+    min-height: 330px;
+  }
+
+  .story-panel::after {
+    content: none;
+  }
+
   .step-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -718,6 +1060,31 @@ footer {
     min-height: 280px;
   }
 
+  .storyboard-title {
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+
+  .story-panels {
+    height: 275px;
+  }
+
+  .mini-app {
+    top: 10px;
+    bottom: 50px;
+  }
+
+  .invite-card {
+    top: 12px;
+  }
+
+  .story-label {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    min-height: 34px;
+  }
+
   .growth-phone {
     top: 20px;
     width: 120px;
@@ -755,6 +1122,18 @@ footer {
 @media (max-width: 520px) {
   .step-grid {
     grid-template-columns: 1fr;
+  }
+
+  .story-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .story-panel {
+    min-height: 340px;
+  }
+
+  .storyboard-title {
+    font-size: 21px;
   }
 
   .step-grid article {
