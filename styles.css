@@ -63,7 +63,7 @@ a {
   min-height: 100svh;
   align-content: start;
   justify-items: center;
-  gap: 28px;
+  gap: clamp(44px, 7vh, 80px);
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
   padding: 24px 0 28px;
@@ -72,7 +72,7 @@ a {
 .hero-copy {
   display: grid;
   justify-items: center;
-  gap: 24px;
+  gap: clamp(28px, 5vh, 48px);
   width: 100%;
   min-width: 0;
   text-align: center;
@@ -146,7 +146,7 @@ h1 {
 .hero-cta {
   display: grid;
   justify-items: center;
-  gap: 12px;
+  gap: clamp(20px, 3vh, 32px);
   text-align: center;
 }
 
@@ -1047,13 +1047,13 @@ footer {
   }
 
   .hero {
-    gap: 22px;
+    gap: clamp(38px, 7vh, 54px);
     padding-top: 14px;
     padding-bottom: 16px;
   }
 
   .hero-copy {
-    gap: 20px;
+    gap: clamp(26px, 5vh, 38px);
   }
 
   h1 {
