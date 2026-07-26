@@ -59,6 +59,9 @@ a {
 
 .hero {
   display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  align-content: start;
   justify-items: center;
   gap: 28px;
   width: min(1180px, calc(100% - 48px));
